@@ -1,15 +1,24 @@
 package com.xma.springbootproduction.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.xma.springbootproduction.models.Message;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/helloworld")
+@RequestMapping("/api")
 public class Controller {
 
-    @GetMapping
+    @GetMapping("/helloworld")
     public String say() {
         return "Hello World!";
+    }
+
+    @GetMapping("/message")
+    Message send() {
+        return new Message("first message");
+    }
+
+    @PostMapping("/message")
+    Message echo (@RequestBody Message message) {
+        return message;
     }
 }
