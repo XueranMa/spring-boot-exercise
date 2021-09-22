@@ -56,6 +56,7 @@ public class UnitTests {
                 .andExpect(content().string(containsString("post test msg")));
     }
 
+    @Test
     public static String asJsonString(final Object obj) {
         try {
             return new ObjectMapper().writeValueAsString(obj);

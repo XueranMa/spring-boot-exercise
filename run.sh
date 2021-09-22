@@ -1,0 +1,1 @@
+java -jar ./target/springboot-production-0.0.1-SNAPSHOT.jar
