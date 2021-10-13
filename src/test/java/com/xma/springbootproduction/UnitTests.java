@@ -40,11 +40,11 @@ public class UnitTests {
                 .andExpect(content().string(containsString("first message")));
     }
 
-    @Test
-    public void testGetSay() throws Exception {
-        mockMvc.perform(get("/api/helloworld")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("Hello World")));
-    }
+//    @Test
+//    public void testGetSay() throws Exception {
+//        mockMvc.perform(get("/api/helloworld")).andDo(print()).andExpect(status().isOk())
+//                .andExpect(content().string(containsString("Hello World")));
+//    }
 
     @Test
     public void testPost() throws Exception {
