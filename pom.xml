@@ -51,11 +51,11 @@
         </dependency>
 
         <!-- asynchronous loggers -->
-        <dependency>
-            <groupId>com.lmax</groupId>
-            <artifactId>disruptor</artifactId>
-            <version>${disruptor.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.lmax</groupId>-->
+<!--            <artifactId>disruptor</artifactId>-->
+<!--            <version>${disruptor.version}</version>-->
+<!--        </dependency>-->
 
         <!-- Below from cloudhub-logging -->
         <!-- Jackson 2.x -->

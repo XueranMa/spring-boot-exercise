@@ -23,9 +23,10 @@ public class Controller {
         InetAddress ip;
         try {
             ip = InetAddress.getLocalHost();
-            logger.info("Your current IP address : " + ip);
+            logger.debug("Your current IP address : " + ip);
             return "Hello World from "+ ip;
         } catch (UnknownHostException e) {
+            logger.debug("Error: " + e.getMessage());
             e.printStackTrace();
             return e.getMessage();
         }
@@ -33,11 +34,13 @@ public class Controller {
 
     @GetMapping("/message")
     Message send() {
+        logger.info("Request to get first message");
         return new Message("first message");
     }
 
     @PostMapping("/message")
     Message echo (@RequestBody Message message) {
+        logger.info("Request to post first message");
         return message;
     }
 }
