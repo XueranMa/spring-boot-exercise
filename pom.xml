@@ -57,6 +57,7 @@
             <version>${disruptor.version}</version>
         </dependency>
 
+        <!-- Below from cloudhub-logging -->
         <!-- Jackson 2.x -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -79,6 +80,13 @@
             <version>${fasterxml.jackson.version}</version>
         </dependency>
 
+        <!-- Below one from tutorial -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>${fasterxml.jackson.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -88,6 +96,7 @@
 
     <build>
         <plugins>
+            <!-- Package as an executable jar/war -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -96,6 +105,8 @@
                     <executable>true</executable>
                 </configuration>
             </plugin>
+
+            <!-- Below from cloudhub-logging -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -110,6 +121,13 @@
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.2</version>
             </plugin>
+            <!-- Below from tutorial -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+            </plugin>
+
         </plugins>
     </build>
 
